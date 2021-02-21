@@ -1,0 +1,61 @@
+<!-- 注册页面 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册页面</title>
+    <!-- 引入bootstrap样式文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="sass/style.css" />
+    <!-- 引入jquery文件 -->
+    <script src="jquery.js"></script>
+    <!-- 引入bootstrap功能文件 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="log"></div>
+        <div class="gonnen">
+          <p>
+            用户名：
+            <input
+              type="text"
+              class="form-control username"
+              placeholder="请输入您的用户名"
+            />
+          </p>
+          <p>
+            密&emsp;码：<input
+              type="password"
+              class="form-control password"
+              placeholder="请输入您的密码"
+            />
+          </p>
+          <button type="button" class="btn btn-primary">注册</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 注册按钮点击事件
+    $(".btn").click(() => {
+      $.get(
+        "http://localhost:6060/resgister",
+        {
+          username: $(".username").val(),
+          password: $(".password").val(),
+        },
+        function (res) {
+          console.log(res);
+          if (res == "注册成功") {
+            window.location.href = "login.html";
+          }
+        }
+      );
+    });
+  </script>
+</html>

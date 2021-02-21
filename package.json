@@ -1,0 +1,17 @@
+{
+  "name": "2021.2.19_denluzhuce_zsgc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17",
+    "url": "^0.11.0"
+  }
+}
